@@ -5,5 +5,5 @@ As an instructor to check your circuit before you flip the power switch to ON.
 
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/cricket_diagram.png")
+knitr::include_graphics("images/cricket_diagram.png", dpi = NA)
 ```
