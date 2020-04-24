@@ -1,0 +1,7 @@
+# Red Green Blue (RGB) LED with Buttons
+
+Build the new circuit below using the 9-Volt battery, three 10 kΩ resistors, an RGB LED, three push buttons, a green wire, and a blue wire.
+
+```{r echo=FALSE}
+knitr::include_graphics("images/rgb_led_diagram.png")
+```
