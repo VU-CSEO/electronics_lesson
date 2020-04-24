@@ -3,5 +3,5 @@
 Upgrade the circuit from Exercise 1 by placing a red jumper wire, another 10 kΩ resistor, a yellow LED, and a black jumper wire.
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/two_led_diagram.png")
+knitr::include_graphics("images/two_led_diagram.png", dpi = NA)
 ```
