@@ -4,5 +4,5 @@ Build the complicated circuit below using the 9-Volt Battery, two 10 kΩ resisto
 Ask an instructor to check your circuit before you flip the power switch to ON.
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/blinker_diagram.png", dpi = NA)
+knitr::include_graphics("images/blinker_diagram.png")
 ```

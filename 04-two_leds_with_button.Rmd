@@ -3,5 +3,5 @@
 Move the battery’s black wire and place a push button as shown below. The push button allows electrical current to flow through it when it is pushed but blocks electrical current when it is not pushed.
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/two_led_with_button_diagram.png", dpi = NA)
+knitr::include_graphics("images/two_led_with_button_diagram.png")
 ```

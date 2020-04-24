@@ -5,5 +5,5 @@ Remove the blue potentiometer, and add the black 330Ω resistor, the clear infra
 Find another team that has finished building this circuit or wait for them to finish. When they do, point their infrared-LED at your phototransistor and vice-versa to make the crickets begin chirping.
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/lonely_cricket_diagram.png", dpi = NA)
+knitr::include_graphics("images/lonely_cricket_diagram.png")
 ```
