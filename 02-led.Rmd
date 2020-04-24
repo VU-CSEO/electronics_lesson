@@ -9,5 +9,5 @@ After building the circuit, **ask an instructor to check it before flipping the 
 After flipping the power switch, electrical current will flow from the battery’s red wire, through the resistor and red LED, and back to the battery through the black wire. The red LED should start to glow if you did everything correctly. Ask for help if the red LED does not turn on.
 
 ```{r echo=FALSE}
-knitr::include_graphics("images/led_diagram.png")
+knitr::include_graphics("images/led_diagram.png", dpi = NA)
 ```
