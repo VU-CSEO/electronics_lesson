@@ -1,0 +1,235 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Basic Electronics and Breadboards},
+  pdfauthor={Clayton Coffman and Daniel Vibbert},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Basic Electronics and Breadboards}
+\author{Clayton Coffman and Daniel Vibbert}
+\date{2020-04-24}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{class-structure}{%
+\chapter{Class Structure}\label{class-structure}}
+
+Student groups should be no more than two. Ideally each student has their own kit of supplies. In our testing sometimes one student in a pair would tend to dominate the supplies. This seemed to be due to an uneven amount of interest between the students. Slightly less interested students will tend to sit-back and let the more dominant student do the work. This denies that student the opportunity to develop interest and self-engage. Careful pairing or having them take turns for each activity may help.
+
+\hypertarget{materials}{%
+\chapter{Materials}\label{materials}}
+
+For each group:
+* Breadboards (1)
+* Jumper wires (several)
+* RGB LED (1)
+* Red LED (1)
+* 10 kΩ resistors (2)
+* 555 Timer (1)
+
+This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
+
+The \textbf{bookdown} package can be installed from CRAN or Github:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\CommentTok{# or the development version}
+\CommentTok{# devtools::install_github("rstudio/bookdown")}
+\end{Highlighting}
+\end{Shaded}
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): \url{https://yihui.name/tinytex/}.
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+This lesson will show you how to build various circuits using a breadboard and some electronics components.
+
+\hypertarget{the-light-emitting-diode-led}{%
+\chapter{The Light Emitting Diode (LED)}\label{the-light-emitting-diode-led}}
+
+Build the circuit below using the 9-Volt Battery, a 10 kΩ resistor, and a red LED.
+
+After building the circuit, \textbf{ask an instructor to check it before flipping the power switch on the battery}.
+
+After flipping the power switch, electrical current will flow from the battery's red wire, through the resistor and red LED, and back to the battery through the black wire. The red LED should start to glow if you did everything correctly. Ask for help if the red LED does not turn on.
+
+\includegraphics{images/led_diagram.png}
+
+\hypertarget{two-leds}{%
+\chapter{Two LEDs}\label{two-leds}}
+
+Upgrade the circuit from Exercise 1 by placing a red jumper wire, another 10 kΩ resistor, a yellow LED, and a black jumper wire.
+
+\includegraphics{images/two_led_diagram.png}
+
+\hypertarget{two-leds-with-a-button}{%
+\chapter{Two LEDs with a Button}\label{two-leds-with-a-button}}
+
+Move the battery's black wire and place a push button as shown below. The push button allows electrical current to flow through it when it is pushed but blocks electrical current when it is not pushed.
+
+\includegraphics{images/two_led_with_button_diagram.png}
+
+\hypertarget{red-green-blue-rgb-led-with-buttons}{%
+\chapter{Red Green Blue (RGB) LED with Buttons}\label{red-green-blue-rgb-led-with-buttons}}
+
+Build the new circuit below using the 9-Volt battery, three 10 kΩ resistors, an RGB LED, three push buttons, a green wire, and a blue wire.
+
+\includegraphics{images/rgb_led_diagram.png}
+
+\hypertarget{the-color-orange}{%
+\chapter{The Color Orange}\label{the-color-orange}}
+
+Build the new circuit below using the 9-Volt battery, a 10 kΩ resistor, an RGB LED, and a blue potentiometer. Turn the knob of the potentiometer until you create the color orange.
+
+\includegraphics{images/rgb_led_diagram.png}
+
+\hypertarget{blinker}{%
+\chapter{Blinker}\label{blinker}}
+
+Build the complicated circuit below using the 9-Volt Battery, two 10 kΩ resistors, the 555 Timer, a red LED, a blue 10 kΩ potentiometer, the yellow capacitor, and the large black capacitor.
+Ask an instructor to check your circuit before you flip the power switch to ON.
+
+\includegraphics{images/blinker_diagram.png}
+
+\hypertarget{cricket}{%
+\chapter{Cricket}\label{cricket}}
+
+Modify the previous circuit by replacing the large black capacitor with a small black capacitor, moving the LED and the 10 kΩ resistor connected to it, and adding the speaker connector as shown.
+As an instructor to check your circuit before you flip the power switch to ON.
+
+\includegraphics{images/cricket_diagram.png}
+
+\hypertarget{lonely-cricket}{%
+\chapter{Lonely Cricket}\label{lonely-cricket}}
+
+Remove the blue potentiometer, and add the black 330Ω resistor, the clear infrared-LED, and black phototransistor. Bend the infrared-LED and black phototransistor so that they both point to the right.
+
+Find another team that has finished building this circuit or wait for them to finish. When they do, point their infrared-LED at your phototransistor and vice-versa to make the crickets begin chirping.
+
+\includegraphics{images/lonely_cricket_diagram.png}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
